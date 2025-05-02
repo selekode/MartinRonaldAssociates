@@ -13,6 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -60,7 +62,7 @@
     <!-- Navbar -->
     <header id="navbar" class="bg-primary text-white hidden">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
-            <div class="text-2xl font-display font-bold"><a href="home">Martin Roland & Associates</a></div>
+            <div class="text-2xl font-display font-bold"><a href="#home">Martin Roland & Associates</a></div>
             <nav class="hidden md:flex space-x-6 text-sm font-semibold">
                 <a href="#home" class="hover:text-accent">Home</a>
                 <a href="#about" class="hover:text-accent">About Us</a>
@@ -102,13 +104,12 @@
             <h2 class="mt-4 text-3xl font-display font-bold">PERSONAL AND BUSINESS <br> FINANCIAL SERVICES</h2>
 
             <a href="#about"
-                class="inline-block mt-8 px-6 py-3 bg-accent text-primary font-semibold rounded-full shadow-md hover:bg-[#e6b90f] transition duration-300">
+                class="inline-block mt-8 px-8 py-3 bg-accent text-primary font-semibold rounded-full shadow-lg hover:bg-[#e6b90f] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-in-out tracking-wide text-lg">
                 Learn More
             </a>
+
         </div>
     </section>
-
-
 
     <!-- About -->
     <section id="about" class="py-16 px-4 max-w-6xl mx-auto">
@@ -138,129 +139,124 @@
         </div>
 
         <!-- Core Values -->
-        <div class="mb-12">
-            <h3 class="text-2xl font-semibold text-primary mb-4">Our Core Values</h3>
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="bg-gray-100 p-4 rounded shadow text-center font-medium">Trust</div>
-                <div class="bg-gray-100 p-4 rounded shadow text-center font-medium">Integrity</div>
-                <div class="bg-gray-100 p-4 rounded shadow text-center font-medium">Reliability</div>
-                <div class="bg-gray-100 p-4 rounded shadow text-center font-medium">Transparency</div>
-                <div class="bg-gray-100 p-4 rounded shadow text-center font-medium">Confidentiality</div>
+        <div class="mb-16">
+            <h3 class="text-3xl font-semibold text-primary mb-8 text-center">Our Core Values</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+
+                <!-- Value Item -->
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300 text-center group">
+                    <i data-lucide="handshake" class="w-8 h-8 text-accent mx-auto mb-3 group-hover:text-[#e6b90f]"></i>
+                    <span class="block text-xl font-semibold text-gray-800">Trust</span>
+                </div>
+
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300 text-center group">
+                    <i data-lucide="compass" class="w-8 h-8 text-accent mx-auto mb-3 group-hover:text-[#e6b90f]"></i>
+                    <span class="block text-xl font-semibold text-gray-800">Integrity</span>
+                </div>
+
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300 text-center group">
+                    <i data-lucide="shield-check"
+                        class="w-8 h-8 text-accent mx-auto mb-3 group-hover:text-[#e6b90f]"></i>
+                    <span class="block text-xl font-semibold text-gray-800">Reliability</span>
+                </div>
+
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300 text-center group">
+                    <i data-lucide="eye" class="w-8 h-8 text-accent mx-auto mb-3 group-hover:text-[#e6b90f]"></i>
+                    <span class="block text-xl font-semibold text-gray-800">Transparency</span>
+                </div>
+
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300 text-center group">
+                    <i data-lucide="lock" class="w-8 h-8 text-accent mx-auto mb-3 group-hover:text-[#e6b90f]"></i>
+                    <span class="block text-xl font-semibold text-gray-800">Confidentiality</span>
+                </div>
+
             </div>
         </div>
 
+
         <!-- Final Paragraph -->
-        <div class="mt-12">
+        <div class="mt-12 max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed">
             <p class="mb-4">We serve a wide spectrum of those in need of accounting, audit, and bespoke financial
                 advice. We share with our clientele our vast knowledge, strengthen resources, build community around
                 technology, and provide insights on trends and opportunities for growth.</p>
             <p class="mb-4">We are linearly structured to bring together the team you need — providing quick and easy
                 access to our senior professionals for timely and decisive advice best suited for you.</p>
-            <p class="text-xl font-semibold text-primary mt-6">Karibu</p>
+            <p class="text-2xl font-semibold text-primary mt-8 text-right">Karibu</p>
         </div>
+
     </section>
 
 
     <!-- Services -->
     <section id="services" class="py-16 px-4 bg-accent text-primary">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold font-display mb-10 text-center">Our Services</h2>
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <!-- Auditing -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex justify-center mb-4">
-                        <!-- Document Magnifying Glass Icon -->
-                        <svg class="w-10 h-10 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M15.75 15.75l3.5 3.5m-3.5-3.5A6.75 6.75 0 1012 18.75 6.75 6.75 0 0015.75 15.75z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Auditing</h3>
-                    <p>We provide thorough and independent audits to ensure accuracy, transparency, and compliance with
-                        financial regulations.</p>
-                </div>
-
-                <!-- Tax Consultancy -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex justify-center mb-4">
-                        <!-- Banknotes Icon -->
-                        <svg class="w-10 h-10 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M3 10h18v4H3v-4zm1 0a2 2 0 012-2h12a2 2 0 012 2m-8 1a1 1 0 110 2 1 1 0 010-2z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Tax Consultancy</h3>
-                    <p>Optimize your tax strategy with expert advice tailored to your business, ensuring compliance and
-                        reducing liability.</p>
-                </div>
-
-                <!-- Retirement & Succession Planning -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex justify-center mb-4">
-                        <!-- Briefcase Icon -->
-                        <svg class="w-10 h-10 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M9 3h6a1 1 0 011 1v3H8V4a1 1 0 011-1zm10 6H5a2 2 0 00-2 2v1h18v-1a2 2 0 00-2-2zM3 14v4a2 2 0 002 2h14a2 2 0 002-2v-4H3z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Retirement & Succession Planning</h3>
-                    <p>Plan ahead with confidence—secure your legacy and ensure a smooth transition for your business or
-                        personal estate.</p>
-                </div>
+          <h2 class="text-3xl font-bold font-display mb-10 text-center">Our Services</h2>
+      
+          <div class="grid md:grid-cols-3 gap-8 text-center">
+            <!-- Auditing -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="file-search" class="w-10 h-10 text-yellow-400"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Auditing</h3>
+              <p>We provide thorough and independent audits to ensure accuracy, transparency, and compliance with financial regulations.</p>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8 mt-10 text-center">
-                <!-- Strategy -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex justify-center mb-4">
-                        <!-- Chart Bar Icon -->
-                        <svg class="w-10 h-10 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M3 3v18h18M9 17V9m4 8V5m4 12v-6" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Strategy</h3>
-                    <p>Develop long-term strategies that align with your goals, adapt to market trends, and drive
-                        sustainable growth.</p>
-                </div>
-
-                <!-- Budgeting -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex justify-center mb-4">
-                        <!-- Calculator Icon -->
-                        <svg class="w-10 h-10 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M6 3h12a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V5a2 2 0 012-2zM9 7h6M9 11h6m-6 4h6" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Budgeting</h3>
-                    <p>Maintain financial control and make informed decisions with detailed, customized budgeting and
-                        forecasting services.</p>
-                </div>
-
-                <!-- Research -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="flex justify-center mb-4">
-                        <!-- Magnifying Glass Circle Icon -->
-                        <svg class="w-10 h-10 text-yellow-400" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                d="M21 21l-5.2-5.2M10 18a8 8 0 100-16 8 8 0 000 16z" />
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Research</h3>
-                    <p>Gain a competitive edge with in-depth research and analysis tailored to your industry and unique
-                        challenges.</p>
-                </div>
+      
+            <!-- Tax Consultancy -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="wallet" class="w-10 h-10 text-yellow-400"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Tax Consultancy</h3>
+              <p>Optimize your tax strategy with expert advice tailored to your business, ensuring compliance and reducing liability.</p>
             </div>
-
+      
+            <!-- Retirement & Succession Planning -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="briefcase" class="w-10 h-10 text-yellow-400"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Retirement & Succession Planning</h3>
+              <p>Plan ahead with confidence—secure your legacy and ensure a smooth transition for your business or personal estate.</p>
+            </div>
+          </div>
+      
+          <div class="grid md:grid-cols-3 gap-8 mt-10 text-center">
+            <!-- Strategy -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="bar-chart-3" class="w-10 h-10 text-yellow-400"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Strategy</h3>
+              <p>Develop long-term strategies that align with your goals, adapt to market trends, and drive sustainable growth.</p>
+            </div>
+      
+            <!-- Budgeting -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="calculator" class="w-10 h-10 text-yellow-400"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Budgeting</h3>
+              <p>Maintain financial control and make informed decisions with detailed, customized budgeting and forecasting services.</p>
+            </div>
+      
+            <!-- Research -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+              <div class="flex justify-center mb-4">
+                <i data-lucide="search" class="w-10 h-10 text-yellow-400"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Research</h3>
+              <p>Gain a competitive edge with in-depth research and analysis tailored to your industry and unique challenges.</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <!-- Partners -->
     <section id="partners" class="py-16 px-4 max-w-6xl mx-auto">
@@ -406,6 +402,9 @@
                 navbar.style.opacity = 0; // Fade out
             }
         }
+    </script>
+    <script>
+        lucide.createIcons();
     </script>
 
 
