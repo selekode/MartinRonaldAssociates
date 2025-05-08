@@ -55,6 +55,19 @@
             opacity: 0;
         }
     </style>
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        });
+    </script>
+
 </head>
 
 <body class="font-body text-gray-900 bg-white">
@@ -95,7 +108,7 @@
     <section id="home" class="bg-cover bg-center relative h-screen flex items-center justify-center text-white"
         style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
         <div class="absolute inset-0 bg-primary bg-opacity-70"></div>
-        <div class="relative text-center px-4">
+        <div class="relative text-center px-4" data-aos="zoom-in">
             <h1 class="text-4xl mb-4 md:text-5xl font-display font-bold">MARTIN RONALD & ASSOCIATES</h1>
 
             <!-- Line break with color #FEC412 -->
@@ -195,68 +208,74 @@
     <!-- Services -->
     <section id="services" class="py-16 px-4 bg-accent text-primary">
         <div class="max-w-7xl mx-auto">
-          <h2 class="text-3xl font-bold font-display mb-10 text-center">Our Services</h2>
-      
-          <div class="grid md:grid-cols-3 gap-8 text-center">
-            <!-- Auditing -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <div class="flex justify-center mb-4">
-                <i data-lucide="file-search" class="w-10 h-10 text-yellow-400"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Auditing</h3>
-              <p>We provide thorough and independent audits to ensure accuracy, transparency, and compliance with financial regulations.</p>
+            <h2 class="text-3xl font-bold font-display mb-10 text-center">Our Services</h2>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Auditing -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="file-search" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Auditing</h3>
+                    <p>We provide thorough and independent audits to ensure accuracy, transparency, and compliance with
+                        financial regulations.</p>
+                </div>
+
+                <!-- Tax Consultancy -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="wallet" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Tax Consultancy</h3>
+                    <p>Optimize your tax strategy with expert advice tailored to your business, ensuring compliance and
+                        reducing liability.</p>
+                </div>
+
+                <!-- Retirement & Succession Planning -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="briefcase" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Retirement & Succession Planning</h3>
+                    <p>Plan ahead with confidence—secure your legacy and ensure a smooth transition for your business or
+                        personal estate.</p>
+                </div>
             </div>
-      
-            <!-- Tax Consultancy -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <div class="flex justify-center mb-4">
-                <i data-lucide="wallet" class="w-10 h-10 text-yellow-400"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Tax Consultancy</h3>
-              <p>Optimize your tax strategy with expert advice tailored to your business, ensuring compliance and reducing liability.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-10 text-center">
+                <!-- Strategy -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="bar-chart-3" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Strategy</h3>
+                    <p>Develop long-term strategies that align with your goals, adapt to market trends, and drive
+                        sustainable growth.</p>
+                </div>
+
+                <!-- Budgeting -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="calculator" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Budgeting</h3>
+                    <p>Maintain financial control and make informed decisions with detailed, customized budgeting and
+                        forecasting services.</p>
+                </div>
+
+                <!-- Research -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="flex justify-center mb-4">
+                        <i data-lucide="search" class="w-10 h-10 text-yellow-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Research</h3>
+                    <p>Gain a competitive edge with in-depth research and analysis tailored to your industry and unique
+                        challenges.</p>
+                </div>
             </div>
-      
-            <!-- Retirement & Succession Planning -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <div class="flex justify-center mb-4">
-                <i data-lucide="briefcase" class="w-10 h-10 text-yellow-400"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Retirement & Succession Planning</h3>
-              <p>Plan ahead with confidence—secure your legacy and ensure a smooth transition for your business or personal estate.</p>
-            </div>
-          </div>
-      
-          <div class="grid md:grid-cols-3 gap-8 mt-10 text-center">
-            <!-- Strategy -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <div class="flex justify-center mb-4">
-                <i data-lucide="bar-chart-3" class="w-10 h-10 text-yellow-400"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Strategy</h3>
-              <p>Develop long-term strategies that align with your goals, adapt to market trends, and drive sustainable growth.</p>
-            </div>
-      
-            <!-- Budgeting -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <div class="flex justify-center mb-4">
-                <i data-lucide="calculator" class="w-10 h-10 text-yellow-400"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Budgeting</h3>
-              <p>Maintain financial control and make informed decisions with detailed, customized budgeting and forecasting services.</p>
-            </div>
-      
-            <!-- Research -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-              <div class="flex justify-center mb-4">
-                <i data-lucide="search" class="w-10 h-10 text-yellow-400"></i>
-              </div>
-              <h3 class="text-xl font-semibold mb-2">Research</h3>
-              <p>Gain a competitive edge with in-depth research and analysis tailored to your industry and unique challenges.</p>
-            </div>
-          </div>
         </div>
-      </section>
-      
+    </section>
+
 
     <!-- Partners -->
     <section id="partners" class="py-16 px-4 max-w-6xl mx-auto">
