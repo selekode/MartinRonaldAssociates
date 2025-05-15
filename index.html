@@ -14,6 +14,7 @@
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
     <script>
         tailwind.config = {
@@ -21,7 +22,7 @@
                 extend: {
                     colors: {
                         primary: '#103045',
-                        accent: '#FFC412',
+                        accent: '#FFB300',
                     },
                     fontFamily: {
                         display: ['Montserrat', 'sans-serif'],
@@ -80,8 +81,7 @@
                 <a href="#home" class="hover:text-accent">Home</a>
                 <a href="#about" class="hover:text-accent">About Us</a>
                 <a href="#services" class="hover:text-accent">Services</a>
-                <a href="#partners" class="hover:text-accent">Partners</a>
-                <a href="#associates" class="hover:text-accent">Associates</a>
+                <a href="#partners" class="hover:text-accent">The Team</a>
                 <a href="#testimonials" class="hover:text-accent">Testimonials</a>
                 <a href="#contact" class="hover:text-accent">Contact</a>
             </nav>
@@ -97,8 +97,7 @@
             <a href="#home" class="block text-white hover:text-accent">Home</a>
             <a href="#about" class="block text-white hover:text-accent">About Us</a>
             <a href="#services" class="block text-white hover:text-accent">Services</a>
-            <a href="#partners" class="block text-white hover:text-accent">Partners</a>
-            <a href="#associates" class="block text-white hover:text-accent">Associates</a>
+            <a href="#partners" class="hover:text-accent">The Team</a>
             <a href="#testimonials" class="block text-white hover:text-accent">Testimonials</a>
             <a href="#contact" class="block text-white hover:text-accent">Contact</a>
         </div>
@@ -236,18 +235,41 @@
 
                 <div class="grid md:grid-cols-3 gap-8 text-center">
                     <!-- Auditing -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex justify-center mb-4">
                             <i data-lucide="file-search" class="w-10 h-10 text-yellow-400"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Auditing</h3>
-                        <p>We provide thorough and independent audits to ensure accuracy, transparency, and compliance
-                            with
-                            financial regulations.</p>
+                        <p>
+                            We provide thorough and independent audits to ensure accuracy, transparency, and compliance
+                            with financial regulations.
+                        </p>
+
+                        <button @click="open = !open" x-text="open ? 'Show less' : 'Show more'"
+                            class="mt-4 text-sm text-blue-600 hover:underline focus:outline-none"></button>
+
+                        <div x-show="open" x-transition class="mt-4 text-gray-700">
+                            <p class="text-left">
+                                Audit & Assurance is a service offered by MRA that provides an independent and objective
+                                evaluation of an organisation's financial information, operations, and internal
+                                controls.
+                                <br>
+                                The objective is to provide assurance that the financial information and
+                                internal controls are in compliance with applicable laws, regulations, and industry
+                                standards.
+                                <br>
+                                Audit & Assurance services also include helping organizations improve the
+                                effectiveness of their operations and internal controls.
+                                <br>
+                                An audit is necessary to ensure the credibility of an organization’s financial records
+                                and to provide assurance to stakeholders that the financial statements are presented
+                                fairly and in accordance with applicable accounting standards.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Tax Consultancy -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex justify-center mb-4">
                             <i data-lucide="wallet" class="w-10 h-10 text-yellow-400"></i>
                         </div>
@@ -255,10 +277,30 @@
                         <p>Optimise your tax strategy with expert advice tailored to your business, ensuring compliance
                             and
                             reducing liability.</p>
+
+                        <button @click="open = !open" x-text="open ? 'Show less' : 'Show more'"
+                            class="mt-4 text-sm text-blue-600 hover:underline focus:outline-none"></button>
+
+                        <div x-show="open" x-transition class="mt-4 text-gray-700">
+                            <p class="text-left">
+                                Specialized services offered by MRA that offers advice and assistance to clients on
+                                financial matters such as strategic planning, financial restructuring, and capital
+                                raising. Finance consultants help to analyse and evaluate a company’s financial
+                                situation and develop solutions to improve their financial performance.
+                                <br>
+                                We can also provide analysis and advice on financial transactions, such as mergers,
+                                acquisitions,
+                                and divestitures. We also help to develop financial models, review and negotiate
+                                financial contracts, and provide assistance with budgeting and forecasting.
+                                <br>
+                                Our consultants help in analysing your organisation’s financial situation to develop
+                                solutions aimed at mitigating risks and improve performance.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Retirement & Succession Planning -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex justify-center mb-4">
                             <i data-lucide="briefcase" class="w-10 h-10 text-yellow-400"></i>
                         </div>
@@ -266,22 +308,65 @@
                         <p>Plan ahead with confidence—secure your legacy and ensure a smooth transition for your
                             business or
                             personal estate.</p>
+
+                        <button @click="open = !open" x-text="open ? 'Show less' : 'Show more'"
+                            class="mt-4 text-sm text-blue-600 hover:underline focus:outline-none"></button>
+
+                        <div x-show="open" x-transition class="mt-4 text-gray-700">
+                            <p class="text-left">
+                                In succession planning we take a deep dive assessing and auditing
+                                the financial governance of and talent in the organisation in order to answer three
+                                fundamental questions:
+                                <br>
+                                i) Are there
+                                enough potential successors available to take on leadership?
+                                <br>
+                                ii) Are the financials
+                                good enough?
+                                <br>
+                                iii)Are there the right skills and competences for the future?
+                                <br>
+                                For the individual, we look to support the foundations and address the gaps and wishes
+                                of the indivual in context with personal circumsatnces and sensitivities.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8 mt-10 text-center">
                     <!-- Strategy -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex justify-center mb-4">
                             <i data-lucide="bar-chart-3" class="w-10 h-10 text-yellow-400"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Strategy</h3>
                         <p>Develop long-term strategies that align with your goals, adapt to market trends, and drive
                             sustainable growth.</p>
+
+                        <button @click="open = !open" x-text="open ? 'Show less' : 'Show more'"
+                            class="mt-4 text-sm text-blue-600 hover:underline focus:outline-none"></button>
+
+                        <div x-show="open" x-transition class="mt-4 text-gray-700">
+                            <p class="text-left">
+                                This is a service offered by MRA to provide clients with advice and guidance on a range
+                                of business-related topics.
+                                <br>
+                                This may include tax planning, financial management, organisational development,
+                                corporate governance, risk management, strategic planning, market research and business
+                                intelligence.
+                                <br>
+                                Business Consultancies can provide clients with objective analysis and
+                                advice on how to improve their business operations, maximize profits and achieve their
+                                goals.
+                                <br>
+                                We also provide help with the implementation of new strategies, policies and
+                                procedures.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Budgeting -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex justify-center mb-4">
                             <i data-lucide="calculator" class="w-10 h-10 text-yellow-400"></i>
                         </div>
@@ -289,10 +374,23 @@
                         <p>Maintain financial control and make informed decisions with detailed, customised budgeting
                             and
                             forecasting services.</p>
+
+                        <button @click="open = !open" x-text="open ? 'Show less' : 'Show more'"
+                            class="mt-4 text-sm text-blue-600 hover:underline focus:outline-none"></button>
+
+                        <div x-show="open" x-transition class="mt-4 text-gray-700">
+                            <p class="text-left">
+                                We understand the importance of accurate financial statements, assessment of risks, and
+                                creation of prudent financial plans and forecasts.
+                                <br>
+                                We also manage investments, create
+                                budgets, and develop strategies to maximize profits and opportinities.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Research -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div x-data="{ open: false }" class="bg-white p-6 rounded-lg shadow-md">
                         <div class="flex justify-center mb-4">
                             <i data-lucide="search" class="w-10 h-10 text-yellow-400"></i>
                         </div>
@@ -300,6 +398,18 @@
                         <p>Gain a competitive edge with in-depth research and analysis tailored to your industry and
                             unique
                             challenges.</p>
+
+                        <button @click="open = !open" x-text="open ? 'Show less' : 'Show more'"
+                            class="mt-4 text-sm text-blue-600 hover:underline focus:outline-none"></button>
+
+                        <div x-show="open" x-transition class="mt-4 text-gray-700">
+                            <p class="text-left">
+                                We provide the highest level of well researched professional services to meet our
+                                client's needs and through mutual financial success. To maintain integrity and honesty
+                                in everything we do. To provide for our team members' development, growth, and
+                                accountability by offering opportunities to achieve personal and professional success.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -308,11 +418,10 @@
 
     </section>
 
-
     <!-- Partners -->
     <section id="partners" class="py-16 px-4 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-primary font-display mb-12 text-center">Our Partners</h2>
-        <div class="grid sm:grid-cols-2 gap-8">
+        <h2 class="text-3xl font-bold text-primary font-display mb-12 text-center">The Team</h2>
+        <div class="grid sm:grid-cols-2 gap-8 mb-10">
             <div class="bg-white rounded-lg shadow-md p-6 text-center">
                 <div
                     class="w-24 h-24 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-3xl font-bold">
@@ -330,55 +439,92 @@
                 <p class="text-sm text-gray-600">Partner</p>
             </div>
         </div>
-    </section>
-
-    <!-- Associates -->
-    <section id="associates" class="py-16 px-4 bg-accent text-primary">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-3xl font-bold font-display mb-12 text-center">Our Associates</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div
-                        class="w-20 h-20 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-2xl font-bold">
-                        JP
-                    </div>
-                    <h3 class="text-lg font-semibold mb-1">John Park</h3>
-                    <p class="text-sm text-gray-600">Consultant</p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <div
+                    class="w-20 h-20 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-2xl font-bold">
+                    JP
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div
-                        class="w-20 h-20 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-2xl font-bold">
-                        DW
-                    </div>
-                    <h3 class="text-lg font-semibold mb-1">David Wetu</h3>
-                    <p class="text-sm text-gray-600">Senior Associate</p>
+                <h3 class="text-lg font-semibold mb-1">John Park</h3>
+                <p class="text-sm text-gray-600">Consultant</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <div
+                    class="w-20 h-20 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-2xl font-bold">
+                    DW
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <div
-                        class="w-20 h-20 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-2xl font-bold">
-                        SK
-                    </div>
-                    <h3 class="text-lg font-semibold mb-1">Sami Kanani</h3>
-                    <p class="text-sm text-gray-600">Associate</p>
+                <h3 class="text-lg font-semibold mb-1">David Wetu</h3>
+                <p class="text-sm text-gray-600">Senior Associate</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <div
+                    class="w-20 h-20 mx-auto mb-4 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 text-2xl font-bold">
+                    SK
                 </div>
+                <h3 class="text-lg font-semibold mb-1">Sami Kanani</h3>
+                <p class="text-sm text-gray-600">Associate</p>
             </div>
         </div>
     </section>
-
 
     <!-- Testimonials -->
-    <section id="testimonials" class="py-16 px-4 max-w-6xl mx-auto">
-        <h2 class="text-3xl font-bold text-primary font-display mb-10 text-center">What Our Clients Say</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-            <div class="bg-white border border-gray-200 p-6 rounded-lg shadow">
-                <p class="italic">“Professional and detail-oriented. They helped us streamline our finances.”</p>
-                <p class="mt-4 font-semibold">– Client A</p>
-            </div>
-            <div class="bg-white border border-gray-200 p-6 rounded-lg shadow">
-                <p class="italic">“Reliable audit services every year. Highly recommend.”</p>
-                <p class="mt-4 font-semibold">– Client B</p>
+    <section id="testimonials" class="py-16 px-4 bg-accent text-primary">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold font-display mb-12 text-center">What Our Clients Say</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white border border-gray-200 p-6 rounded-lg shadow">
+                    <p class="italic">“Professional and detail-oriented. They helped us streamline our finances.”</p>
+                    <p class="mt-4 font-semibold">– Client A</p>
+                </div>
+                <div class="bg-white border border-gray-200 p-6 rounded-lg shadow">
+                    <p class="italic">“Reliable audit services every year. Highly recommend.”</p>
+                    <p class="mt-4 font-semibold">– Client B</p>
+                </div>
             </div>
         </div>
+        <div class="max-w-7xl mx-auto mt-12">
+            <h2 class="text-3xl font-bold font-display mb-12 text-center">Companies we've worked with</h2>
+            <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
+                <!-- Company 1 -->
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/120x60?text=Logo+1" alt="Company 1 Logo"
+                        class="max-h-12 object-contain" />
+                </div>
+                <!-- Company 2 -->
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/120x60?text=Logo+2" alt="Company 2 Logo"
+                        class="max-h-12 object-contain" />
+                </div>
+                <!-- Company 3 -->
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/120x60?text=Logo+3" alt="Company 3 Logo"
+                        class="max-h-12 object-contain" />
+                </div>
+                <!-- Company 4 -->
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/120x60?text=Logo+4" alt="Company 4 Logo"
+                        class="max-h-12 object-contain" />
+                </div>
+                <!-- Company 5 -->
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/120x60?text=Logo+5" alt="Company 5 Logo"
+                        class="max-h-12 object-contain" />
+                </div>
+                <!-- Company 6 -->
+                <div
+                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
+                    <img src="https://via.placeholder.com/120x60?text=Logo+6" alt="Company 6 Logo"
+                        class="max-h-12 object-contain" />
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
     <!-- Contact -->
@@ -395,10 +541,13 @@
             <!-- Column 2: Contact Info -->
             <div>
                 <h3 class="text-xl font-semibold text-accent mb-2">Contact</h3>
-                <p><strong>Email: </strong><a href="mailto:info@martinronaldassociates.com" class="hover:text-accent">info@martinronaldassociates.com</a></p>
+                <p><strong>Email: </strong><a href="mailto:info@martinronaldassociates.com"
+                        class="hover:text-accent">info@martinronaldassociates.com</a></p>
                 <p><strong>Address:</strong> Jabavu Road, P.O. Box 52374, Nairobi 00100 20530</p>
-                <p><strong>Phone:</strong><a href="tel:info@martinronaldassociates.com" class="hover:text-accent"> +254 (0)722 707 172</a></p>
-                <p><strong>Phone:</strong><a href="tel:info@martinronaldassociates.com" class="hover:text-accent"> +254 (0)735 707 172</a></p>
+                <p><strong>Phone:</strong><a href="tel:info@martinronaldassociates.com" class="hover:text-accent"> +254
+                        (0)722 707 172</a></p>
+                <p><strong>Phone:</strong><a href="tel:info@martinronaldassociates.com" class="hover:text-accent"> +254
+                        (0)735 707 172</a></p>
                 <div class="mt-4 space-x-4">
                     <a href="#" aria-label="LinkedIn" class="hover:text-accent">LinkedIn</a>
                     <a href="#" aria-label="Twitter" class="hover:text-accent">Twitter</a>
@@ -413,8 +562,7 @@
                     <li><a href="#home" class="hover:text-accent">Home</a></li>
                     <li><a href="#about" class="hover:text-accent">About Us</a></li>
                     <li><a href="#services" class="hover:text-accent">Services</a></li>
-                    <li><a href="#partners" class="hover:text-accent">Partners</a></li>
-                    <li><a href="#advisors" class="hover:text-accent">Advisors</a></li>
+                    <li><a href="#partners" class="hover:text-accent">The Team</a></li>
                     <li><a href="#testimonials" class="hover:text-accent">Testimonials</a></li>
                 </ul>
             </div>
