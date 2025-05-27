@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Martin Ronald & Associates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#103045',
+                        accent: '#FFB300',
+                    },
+                    fontFamily: {
+                        display: ['Montserrat', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        });
+    </script>
+
+</head>
+
+<body class="font-body text-gray-900 bg-white">
+
+    <!-- Navbar -->
+    <header id="navbar" class="w-full bg-primary text-white fixed z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
+            <a href="#home">
+                <img src="images/Logo_whiteCircle_blueBG_2.png" alt="Martin Roland & Associates Logo" class="h-10">
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-semibold">
+                <a href="index.html#home" class="hover:text-accent">Home</a>
+                <a href="index.html#about" class="hover:text-accent">About Us</a>
+                <a href="index.html#services" class="hover:text-accent">Services</a>
+                <a href="index.html#partners" class="hover:text-accent">The Team</a>
+                <a href="index.html#testimonials" class="hover:text-accent">Testimonials</a>
+                <a href="index.html#contact" class="hover:text-accent">Contact</a>
+            </nav>
+
+            <button id="menuToggle" class="md:hidden focus:outline-none text-accent w-8 h-8 relative z-50">
+                <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Nav -->
+        <div id="mobileMenu" class="hidden md:hidden px-4 pb-4 space-y-2 text-sm font-semibold bg-primary">
+            <a href="index.html#home" class="block text-white hover:text-accent">Home</a>
+            <a href="index.html#about" class="block text-white hover:text-accent">About Us</a>
+            <a href="index.html#services" class="block text-white hover:text-accent">Services</a>
+            <a href="index.html#partners" class="block text-white hover:text-accent">The Team</a>
+            <a href="index.html#testimonials" class="block text-white hover:text-accent">Testimonials</a>
+            <a href="index.html#contact" class="block text-white hover:text-accent">Contact</a>
+        </div>
+    </header>
+
+
+
+    <!-- Privacy Policy -->
+    <section id="about" class="py-16 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-primary font-display mt-12 mb-8">Privacy Policy</h2>
+
+        <p class="mb-8">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim
+            sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius
+            a, semper congue, euismod non, mi.
+
+            Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
+            Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.
+
+            Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede.
+            Praesent blandit odio eu enim. Pellentesque sed dui ut augue blandit sodales. Vestibulum ante ipsum primis
+            in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam nibh.
+
+            Mauris ac mauris sed pede pellentesque fermentum. Maecenas adipiscing ante non diam sodales hendrerit.
+        </p>
+
+    </section>
+
+    <!-- Empty Section -->
+    <section id="about" class="py-16 px-4 max-w-6xl mx-auto">
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 px-4 bg-primary text-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+
+            <!-- Column 1: Description -->
+            <div>
+                <img src="images/Logo_whiteCircle_blueBG_2.png" alt="Martin Ronald & Associates Logo" class="h-12 mb-4">
+                <p>Martin Ronald & Associates is committed to providing professional financial, audit, and tax services.
+                    Reach out to us and let's work together to secure your financial future.</p>
+            </div>
+
+            <!-- Column 2: Contact Info -->
+            <div>
+                <h3 class="text-xl font-semibold text-accent mb-2">Contact</h3>
+                <p><strong class="text-accent">Email: </strong><a href="mailto:info@martinronaldassociates.com"
+                        class="hover:text-accent">info@martinronaldassociates.com</a></p>
+                <p><strong class="text-accent">Address:</strong> Jabavu Road, P.O. Box 52374, Nairobi 00100</p>
+                <p><strong class="text-accent">Phone:</strong><a href="tel:info@martinronaldassociates.com"
+                        class="hover:text-accent"> +254
+                        (0)722 707 172</a></p>
+                <p><strong class="text-accent">Phone:</strong><a href="tel:info@martinronaldassociates.com"
+                        class="hover:text-accent"> +254
+                        (0)735 707 172</a></p>
+                <div class="mt-4 space-x-4">
+                    <a href="#" aria-label="LinkedIn" class="hover:text-accent">LinkedIn</a>
+                    <a href="#" aria-label="Twitter" class="hover:text-accent">Twitter</a>
+                    <a href="#" aria-label="Facebook" class="hover:text-accent">Facebook</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold text-accent mb-2">Quick Links</h3>
+                <ul class="space-y-1">
+                    <li><a href="index.html#home" class="hover:text-accent">Home</a></li>
+                    <li><a href="index.html#about" class="hover:text-accent">About Us</a></li>
+                    <li><a href="index.html#services" class="hover:text-accent">Services</a></li>
+                    <li><a href="index.html#partners" class="hover:text-accent">The Team</a></li>
+                    <li><a href="index.html#testimonials" class="hover:text-accent">Testimonials</a></li>
+                    <li><a href="#home" class="hover:text-accent">Privacy Policy</a></li>
+                    <li><a href="legal-notice.html" class="hover:text-accent">Legal Notice</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+        class="fixed bottom-6 right-6 bg-accent text-primary p-3 rounded-full shadow-lg hover:bg-yellow-300 transition duration-300 z-50">
+        ↑
+    </button>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center py-4 text-sm">
+        <p>&copy; 2025 Martin Ronald & Associates. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileMenu = document.getElementById("mobileMenu");
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+
+</body>
+
+</html>

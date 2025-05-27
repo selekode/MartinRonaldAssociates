@@ -12,6 +12,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <!-- Include Swiper styles in your <head> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
@@ -76,7 +79,9 @@
     <!-- Navbar -->
     <header id="navbar" class="bg-primary text-white hidden fixed z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
-            <div class="text-2xl font-display font-bold"><a href="#home">Martin Roland & Associates</a></div>
+            <a href="#home">
+                <img src="images/Logo_whiteCircle_blueBG_2.png" alt="Martin Roland & Associates Logo" class="h-10">
+            </a>
             <nav class="hidden md:flex space-x-6 text-sm font-semibold">
                 <a href="#home" class="hover:text-accent">Home</a>
                 <a href="#about" class="hover:text-accent">About Us</a>
@@ -97,7 +102,7 @@
             <a href="#home" class="block text-white hover:text-accent">Home</a>
             <a href="#about" class="block text-white hover:text-accent">About Us</a>
             <a href="#services" class="block text-white hover:text-accent">Services</a>
-            <a href="#partners" class="hover:text-accent">The Team</a>
+            <a href="#partners" class="block text-white hover:text-accent">The Team</a>
             <a href="#testimonials" class="block text-white hover:text-accent">Testimonials</a>
             <a href="#contact" class="block text-white hover:text-accent">Contact</a>
         </div>
@@ -482,48 +487,75 @@
                 </div>
             </div>
         </div>
+
         <div class="max-w-7xl mx-auto mt-12">
             <h2 class="text-3xl font-bold font-display mb-12 text-center">Companies we have worked with</h2>
-            <div class="grid md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
-                <!-- Company 1 -->
-                <div
-                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
-                    <img src="https://via.placeholder.com/120x60?text=Logo+1" alt="Company 1 Logo"
-                        class="max-h-12 object-contain" />
-                </div>
-                <!-- Company 2 -->
-                <div
-                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
-                    <img src="https://via.placeholder.com/120x60?text=Logo+2" alt="Company 2 Logo"
-                        class="max-h-12 object-contain" />
-                </div>
-                <!-- Company 3 -->
-                <div
-                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
-                    <img src="https://via.placeholder.com/120x60?text=Logo+3" alt="Company 3 Logo"
-                        class="max-h-12 object-contain" />
-                </div>
-                <!-- Company 4 -->
-                <div
-                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
-                    <img src="https://via.placeholder.com/120x60?text=Logo+4" alt="Company 4 Logo"
-                        class="max-h-12 object-contain" />
-                </div>
-                <!-- Company 5 -->
-                <div
-                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
-                    <img src="https://via.placeholder.com/120x60?text=Logo+5" alt="Company 5 Logo"
-                        class="max-h-12 object-contain" />
-                </div>
-                <!-- Company 6 -->
-                <div
-                    class="bg-white border border-gray-200 p-6 rounded-lg shadow flex items-center justify-center h-32">
-                    <img src="https://via.placeholder.com/120x60?text=Logo+6" alt="Company 6 Logo"
-                        class="max-h-12 object-contain" />
+
+            <!-- Swiper Container -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Company 1 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/120x60?text=Logo+1" alt="Company 1 Logo"
+                            class="max-h-12 object-contain" />
+                    </div>
+                    <!-- Company 2 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/120x60?text=Logo+2" alt="Company 2 Logo"
+                            class="max-h-12 object-contain" />
+                    </div>
+                    <!-- Company 3 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/120x60?text=Logo+3" alt="Company 3 Logo"
+                            class="max-h-12 object-contain" />
+                    </div>
+                    <!-- Company 4 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/120x60?text=Logo+4" alt="Company 4 Logo"
+                            class="max-h-12 object-contain" />
+                    </div>
+                    <!-- Company 5 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/120x60?text=Logo+5" alt="Company 5 Logo"
+                            class="max-h-12 object-contain" />
+                    </div>
+                    <!-- Company 6 -->
+                    <div
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
+                        <img src="https://via.placeholder.com/120x60?text=Logo+6" alt="Company 6 Logo"
+                            class="max-h-12 object-contain" />
+                    </div>
                 </div>
             </div>
         </div>
 
+        <!-- Include Swiper JS at the bottom of your <body> -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            const swiper = new Swiper('.mySwiper', {
+                slidesPerView: 2,
+                spaceBetween: 20,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                    }
+                },
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }
+            });
+        </script>
 
     </section>
 
@@ -533,7 +565,7 @@
 
             <!-- Column 1: Description -->
             <div>
-                <h2 class="text-3xl font-bold text-accent font-display mb-4">Contact Us</h2>
+                <img src="images/Logo_whiteCircle_blueBG_2.png" alt="Martin Ronald & Associates Logo" class="h-12 mb-4">
                 <p>Martin Ronald & Associates is committed to providing professional financial, audit, and tax services.
                     Reach out to us and let's work together to secure your financial future.</p>
             </div>
@@ -541,12 +573,14 @@
             <!-- Column 2: Contact Info -->
             <div>
                 <h3 class="text-xl font-semibold text-accent mb-2">Contact</h3>
-                <p><strong>Email: </strong><a href="mailto:info@martinronaldassociates.com"
+                <p><strong class="text-accent">Email: </strong><a href="mailto:info@martinronaldassociates.com"
                         class="hover:text-accent">info@martinronaldassociates.com</a></p>
-                <p><strong>Address:</strong> Jabavu Road, P.O. Box 52374, Nairobi 00100</p>
-                <p><strong>Phone:</strong><a href="tel:info@martinronaldassociates.com" class="hover:text-accent"> +254
+                <p><strong class="text-accent">Address:</strong> Jabavu Road, P.O. Box 52374, Nairobi 00100</p>
+                <p><strong class="text-accent">Phone:</strong><a href="tel:info@martinronaldassociates.com"
+                        class="hover:text-accent"> +254
                         (0)722 707 172</a></p>
-                <p><strong>Phone:</strong><a href="tel:info@martinronaldassociates.com" class="hover:text-accent"> +254
+                <p><strong class="text-accent">Phone:</strong><a href="tel:info@martinronaldassociates.com"
+                        class="hover:text-accent"> +254
                         (0)735 707 172</a></p>
                 <div class="mt-4 space-x-4">
                     <a href="#" aria-label="LinkedIn" class="hover:text-accent">LinkedIn</a>
@@ -564,7 +598,10 @@
                     <li><a href="#services" class="hover:text-accent">Services</a></li>
                     <li><a href="#partners" class="hover:text-accent">The Team</a></li>
                     <li><a href="#testimonials" class="hover:text-accent">Testimonials</a></li>
+                    <li><a href="privacy-policy.html" class="hover:text-accent">Privacy Policy</a></li>
+                    <li><a href="legal-notice.html" class="hover:text-accent">Legal Notice</a></li>
                 </ul>
+
             </div>
         </div>
     </section>
