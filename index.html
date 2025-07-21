@@ -535,68 +535,82 @@
             <!-- Swiper Container -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <!-- Company 1 -->
+                    <!-- Company A -->
                     <div
-                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
-                        <img src="https://via.placeholder.com/120x60?text=Logo+1" alt="Company 1 Logo"
-                            class="max-h-12 object-contain" />
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="images/companies/formatted/ecobank.png" alt="Company 1 Logo"
+                            class="w-full h-full object-contain" />
                     </div>
-                    <!-- Company 2 -->
+
+                    <!-- Company B -->
                     <div
-                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
-                        <img src="https://via.placeholder.com/120x60?text=Logo+2" alt="Company 2 Logo"
-                            class="max-h-12 object-contain" />
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="images/companies/formatted/fida_kenya.png" alt="Company 2 Logo"
+                            class="w-full h-full object-contain" />
                     </div>
-                    <!-- Company 3 -->
+
+                    <!-- Company C -->
                     <div
-                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
-                        <img src="https://via.placeholder.com/120x60?text=Logo+3" alt="Company 3 Logo"
-                            class="max-h-12 object-contain" />
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="images/companies/formatted/kenya_girl_guides_association.png" alt="Company 3 Logo"
+                            class="w-full h-full object-contain" />
                     </div>
-                    <!-- Company 4 -->
+
+                    <!-- Company D -->
                     <div
-                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
-                        <img src="https://via.placeholder.com/120x60?text=Logo+4" alt="Company 4 Logo"
-                            class="max-h-12 object-contain" />
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="images/companies/formatted/strathmore_university.png" alt="Company 4 Logo"
+                            class="w-full h-full object-contain" />
                     </div>
-                    <!-- Company 5 -->
+
+                    <!-- Company C -->
                     <div
-                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
-                        <img src="https://via.placeholder.com/120x60?text=Logo+5" alt="Company 5 Logo"
-                            class="max-h-12 object-contain" />
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="images/companies/formatted/kenya_girl_guides_association.png" alt="Company 3 Logo"
+                            class="w-full h-full object-contain" />
                     </div>
-                    <!-- Company 6 -->
+
+                    <!-- Company D -->
                     <div
-                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 p-6 rounded-lg shadow">
-                        <img src="https://via.placeholder.com/120x60?text=Logo+6" alt="Company 6 Logo"
-                            class="max-h-12 object-contain" />
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="images/companies/formatted/strathmore_university.png" alt="Company 4 Logo"
+                            class="w-full h-full object-contain" />
+                    </div>
+
+                    <!-- Company B -->
+                    <div
+                        class="swiper-slide flex items-center justify-center h-32 bg-white border border-gray-200 rounded-lg shadow overflow-hidden">
+                        <img src="images/companies/formatted/fida_kenya.png" alt="Company 2 Logo"
+                            class="w-full h-full object-contain" />
                     </div>
                 </div>
             </div>
+
+
         </div>
 
-        <!-- Include Swiper JS at the bottom of your <body> -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
         <script>
-            const swiper = new Swiper('.mySwiper', {
-                slidesPerView: 2,
-                spaceBetween: 20,
-                breakpoints: {
-                    768: {
-                        slidesPerView: 3,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                    }
-                },
+            const swiper = new Swiper(".mySwiper", {
                 loop: true,
+                slidesPerView: 3,
+                spaceBetween: 20,
+                speed: 4000, // Slow, smooth scrolling (higher = slower)
                 autoplay: {
-                    delay: 2500,
+                    delay: 1, // Tiny delay to simulate continuous motion
                     disableOnInteraction: false,
-                }
+                    pauseOnMouseEnter: false,
+                },
+                allowTouchMove: false, // optional: disables manual dragging
             });
         </script>
+
+
+
+
 
     </section>
 
